@@ -48,8 +48,7 @@ services:
     volumes:
       - scrib_uploads:/usr/local/tomcat/webapps/scrib/uploads
     depends_on:
-      scrib-db:
-        condition: service_healthy
+      - scrib-db
     networks:
       - scrib-network
     healthcheck:
