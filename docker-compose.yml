@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   # MySQL 数据库服务
@@ -48,8 +48,7 @@ services:
     volumes:
       - scrib_uploads:/usr/local/tomcat/webapps/scrib/uploads
     depends_on:
-      scrib-db:
-        condition: service_healthy
+      - scrib-db
     networks:
       - scrib-network
     healthcheck:
@@ -57,7 +56,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 60s
 
 volumes:
   scrib_mysql_data:
