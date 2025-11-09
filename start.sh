@@ -41,7 +41,7 @@ echo -e "${GREEN}✓ 旧容器已清理${NC}"
 echo ""
 
 echo -e "${YELLOW}步骤 2/4: 重新构建镜像（这可能需要几分钟）...${NC}"
-$COMPOSE_CMD build --no-cache
+$COMPOSE_CMD build
 echo -e "${GREEN}✓ 镜像构建完成${NC}"
 echo ""
 
